@@ -1,0 +1,24 @@
+﻿@model Sitefinity.EnhancedForms.Mvc.Models.ConfirmationField.ConfirmationFieldViewModel
+
+@using Telerik.Sitefinity.UI.MVC;
+@using Telerik.Sitefinity.Frontend.Forms.Mvc.Helpers;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.Services;
+@using Telerik.Sitefinity.Localization;
+@using Telerik.Sitefinity.Frontend.Forms.Mvc.StringResources;
+
+@Html.Script(ScriptRef.JQuery, "top", false)
+<div class="@Model.CssClass sf-fieldWrp" data-sf-role="confirmation-field-container">
+    <input data-sf-role="violation-restrictions" type="hidden" value='{"maxLength":"@Model.ValidatorDefinition.MaxLength", "minLength": "@Model.ValidatorDefinition.MinLength"}' />
+    <input data-sf-role="violation-messages" data-sf-description="@Html.UniqueId("Textbox")" type="hidden" value='{"fieldsMatch":"@Model.ConfirmValidatorDefinition.FieldsDoNotMatchMessage", "maxLength":"@Model.MaxLengthViolationMessage", "required": "@Model.MainFieldRequiredViolationMessage", "invalid": "@(Res.Get<FieldResources>().InvalidEntryMessage)", "regularExpression": "@Model.ValidatorDefinition.RegularExpressionViolationMessage"}' />
+    <label for='@Html.UniqueId("Textbox")'>@Model.MetaField.Title</label>
+    <input id='@Html.UniqueId("Textbox")' class="form-control" data-sf-role="text-field-input" type="text" name="@Model.MetaField.FieldName" placeholder="@Model.PlaceholderText" value="@Model.Value" @Html.Raw(Model.ValidationAttributes) />
+    <div id='@Html.UniqueId("TextboxErrorMessage")' data-sf-role="error-message" role="alert" aria-live="assertive" class="text-danger"></div>
+    <input data-sf-role="violation-restrictions" type="hidden" value='{"maxLength":"@Model.ValidatorDefinition.MaxLength", "minLength": "@Model.ValidatorDefinition.MinLength"}' />
+    <input data-sf-role="violation-messages" data-sf-description="@Html.UniqueId("ConfirmTextbox")" type="hidden" value='{"required": "@Model.ConfirmationFieldRequiredViolationMessage"}' />
+    <label for='@Html.UniqueId("ConfirmTextbox")'>@Model.ConfirmationTitle</label>
+    <input id='@Html.UniqueId("ConfirmTextbox")' class="form-control" data-sf-role="text-field-confirmation-input" type="text" placeholder="@Model.ConfirmationPlaceholder" value="@Model.SecondValue" />
+    <div data-sf-role="error-message" role="alert" aria-live="assertive" class="text-danger"></div>
+</div>
+@Html.Script(Url.WidgetContent("Mvc/Scripts/ConfirmationField/confirmation-field.js"), "bottom")
