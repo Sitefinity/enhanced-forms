@@ -17,7 +17,7 @@ These controls are based on the `Dropdown list` control. To learn how to configu
 
 You may change which countries are shown in these controls. To do this, perform the following:
 * Open your Sitefinity CMS backend.
-* Nabigate to *Administration » Settings » Advanced*.
+* Navigate to *Administration » Settings » Advanced*.
 * Navigate to *Locations » Countries  » (country code)*
 * Adjust the list of countries.
 * To modify the states for each country, perform the following:
