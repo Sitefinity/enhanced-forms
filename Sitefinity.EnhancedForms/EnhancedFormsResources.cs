@@ -79,8 +79,8 @@ namespace Sitefinity.EnhancedForms
         /// Gets fields do not match message
         /// </summary>
         [ResourceEntry("FieldsDoNotMatchMessage",
-            Value = "Fields do not match",
-            Description = "Fields do not match",
+            Value = "The entered values do not match",
+            Description = "The entered values do not match",
             LastModified = "2019/05/13")]
         public string FieldsDoNotMatchMessage
         {

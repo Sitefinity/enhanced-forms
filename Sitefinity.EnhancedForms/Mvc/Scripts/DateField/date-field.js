@@ -288,7 +288,6 @@
                             if (!currentDate) {
                                 var validationMessages = getValidationMessages(e);
                                 setErrorMessage(e, validationMessages.invalid);
-                                $(".k-invalid:last").focus();
                                 return false;
                             }
                         }

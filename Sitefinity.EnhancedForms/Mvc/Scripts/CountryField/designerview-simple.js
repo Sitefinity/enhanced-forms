@@ -71,6 +71,9 @@
             setTimeout(function () {
                 var itemsList = document.getElementsByClassName('list-group')[0];
                 itemsList.scrollTop = itemsList.scrollHeight;
+
+                var allListItems = itemsList.querySelectorAll('input');
+                allListItems[allListItems.length - 1].focus();
             }, 100);
         };
 
