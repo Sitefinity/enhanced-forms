@@ -46,14 +46,18 @@ namespace Sitefinity.EnhancedForms
 
             if (AreEnhancedFormsWidgetsLoaded(toolboxItems))
             {
-                toolboxItems.First(i => i.Name.Equals("CountryField")).Ordinal = allItemsCount++;
-                toolboxItems.First(i => i.Name.Equals("StateField")).Ordinal = allItemsCount++;
-                toolboxItems.First(i => i.Name.Equals("ConfirmationField")).Ordinal = allItemsCount++;
-                toolboxItems.First(i => i.Name.Equals("DateField")).Ordinal = allItemsCount;
-
-                using (new ElevatedModeRegion(configManager))
+                // Set the ordinal only if it is not already set
+                if (!AreEnhancedFormsWidgetsOrdinalsSet(toolboxItems))
                 {
-                    configManager.SaveSection(toolboxConfig);
+                    toolboxItems.First(i => i.Name.Equals("CountryField")).Ordinal = allItemsCount++;
+                    toolboxItems.First(i => i.Name.Equals("StateField")).Ordinal = allItemsCount++;
+                    toolboxItems.First(i => i.Name.Equals("ConfirmationField")).Ordinal = allItemsCount++;
+                    toolboxItems.First(i => i.Name.Equals("DateField")).Ordinal = allItemsCount;
+
+                    using (new ElevatedModeRegion(configManager))
+                    {
+                        configManager.SaveSection(toolboxConfig);
+                    }
                 }
             }
         }
@@ -69,6 +73,21 @@ namespace Sitefinity.EnhancedForms
             }
 
             return false;
+        }
+
+        private static bool AreEnhancedFormsWidgetsOrdinalsSet(List<ToolboxItem> toolboxItems)
+        {
+            var countryFieldOrdinal = toolboxItems.First(i => i.Name.Equals("CountryField")).Ordinal;
+            var stateFieldOrdinal = toolboxItems.First(i => i.Name.Equals("StateField")).Ordinal;
+            var confirmationFieldOrdinal = toolboxItems.First(i => i.Name.Equals("ConfirmationField")).Ordinal;
+            var dateFieldOrdinal = toolboxItems.First(i => i.Name.Equals("DateField")).Ordinal;
+
+            if (countryFieldOrdinal < 1 && stateFieldOrdinal < 1 && confirmationFieldOrdinal < 1 && dateFieldOrdinal < 1)
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }
