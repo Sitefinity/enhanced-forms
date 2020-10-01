@@ -97,6 +97,38 @@ After you build the `Sitefinity.EnhancedForms` project, you can use the new form
 * Drag and drop them as any other form control.
 * Click *Publish* to save your form.
 
+
+*Note:* The enhanced forms project depends on specific NuGet packages for Sitefinity CMS. When you include the enhanced forms project in your solution that depends on a newer Sitefinity version, you must also update the ```Telerik.Sitefinity.Feather``` dependency of the enhanced forms project to match your Sitefinity version.
+
+The ```Feather``` package comes with a lot of content inside the ```ResourcePackages``` folder. However, you need only the views for the enhanced forms fields.  
+
+IMPORTANT: After you update the enhanced forms project in your solution, you must delete all of the content inside the ```ResourcePackages``` folder, except the one needed by the enhanced forms fields. Your folder structure should look like this:
+
+ 
+```bash
+
+ResourcePackages
+
+   Bootstrap4
+
+      MVC
+
+         Views
+
+            ConfirmationField
+
+            CountryField
+
+            DateField
+
+            StateField
+
+      razorgenerator.directives
+
+ ``` 
+
+To prevent build errors, you must delete all other files generated after the ```Telerik.Sitefinity.Feather``` package upgrade completes.
+
 ## More information
 
 The source code in this repository is not supported by Progress. However, you may create pull requests and open issues in this repository and the Sitefinity team will address them.
