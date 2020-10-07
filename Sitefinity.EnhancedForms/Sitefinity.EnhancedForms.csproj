@@ -204,10 +204,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Mvc\Views\ConfirmationField\DesignerView.Simple.cshtml" />
-    <None Include="Mvc\Views\ConfirmationField\DesignerView.Simple.json" />
-    <None Include="Mvc\Views\ConfirmationField\Read.Default.cshtml" />
-    <None Include="Mvc\Views\ConfirmationField\Write.Default.cshtml" />
+    <EmbeddedResource Include="Mvc\Views\ConfirmationField\DesignerView.Simple.cshtml" />
+    <EmbeddedResource Include="Mvc\Views\ConfirmationField\DesignerView.Simple.json" />
+    <EmbeddedResource Include="Mvc\Views\ConfirmationField\Read.Default.cshtml" />
+    <EmbeddedResource Include="Mvc\Views\ConfirmationField\Write.Default.cshtml" />
     <EmbeddedResource Include="Mvc\Views\CountryField\DesignerView.Simple.cshtml" />
     <EmbeddedResource Include="Mvc\Views\CountryField\DesignerView.Simple.json" />
     <EmbeddedResource Include="Mvc\Views\CountryField\Read.Default.cshtml" />
