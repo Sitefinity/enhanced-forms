@@ -13,7 +13,7 @@ This GitHub repository contains the source code for the following widgets:
 
 You use these form fields to enabe your site visitors to choose their country and state.
 
-These controls are based on the `Dropdown list` control. To learn how to configure their properties, see [Dropdown list](/dropdown-list).
+These controls are based on the `Dropdown list` control. To learn how to configure their properties, see [Dropdown list](https://www.progress.com/documentation/sitefinity-cms/dropdown-list).
 
 You may change which countries are shown in these controls. To do this, perform the following:
 * Open your Sitefinity CMS backend.
@@ -24,7 +24,7 @@ You may change which countries are shown in these controls. To do this, perform 
   * Navigate to a country as described above
   * Click *StatesProvinces* sub-node
 
-By default, these controls are independant. You need to implement specific logic, such as changing the list of states when a country selection changes. For more information, see [Form rules](/form-rules).
+By default, these controls are independant. You need to implement specific logic, such as changing the list of states when a country selection changes. For more information, see [Form rules](https://www.progress.com/documentation/sitefinity-cms/form-rules).
 
 ### `DateField`
 
