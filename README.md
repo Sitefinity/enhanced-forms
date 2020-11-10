@@ -30,7 +30,7 @@ By default, these controls are independant. You need to implement specific logic
 
 You use the `DateField` to enable your site visitors to pick date and time.
 
-This control is based on the `Textbox` control.  To learn how to configure their properties, see [Textbox](/textbox).
+This control is based on the `Textbox` control.  To learn how to configure their properties, see [Textbox](https://www.progress.com/documentation/sitefinity-cms/textbox).
 
 Additionally, you may use this control on four modes:
 
@@ -48,7 +48,7 @@ This control uses the Kendo UI DateTime picker. If you want to customize it's be
 
 You use the `ConfirmationField` to create user interfaces where your visitors confirm their input. Using this widget, you force your visitors to enter some important piece of information, such as e-mail or password, two times and then ensure that they can submit the form content only if the two values match.
 
-This control is based on the `Textbox` control.  To learn how to configure their properties, see [Textbox](/textbox).
+This control is based on the `Textbox` control.  To learn how to configure their properties, see [Textbox](https://www.progress.com/documentation/sitefinity-cms/textbox).
 
 ## Prerequisites
 
@@ -57,7 +57,7 @@ To use these widgets, you need to build them from the source code. Make sure tha
 * A valid Sitefinity CMS license.
 * Sitefinity CMS 13.0 or later.
 * Your setup must comply with the minimum system requirements.
-For more information, see the [System requirements](https://docs.sitefinity.com/system-requirements) for the Sitefinity CMS version you are using.
+For more information, see the [System requirements](https://www.progress.com/documentation/sitefinity-cms/system-requirements) for the Sitefinity CMS version you are using.
 * Visual Studio 2015 or later.
 
 ## Building the widgets
