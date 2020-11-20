@@ -47,8 +47,9 @@ This control uses the Kendo UI DateTime picker. If you want to customize it's be
 ### `ConfirmationField`
 
 You use the `ConfirmationField` to create user interfaces where your visitors confirm their input. Using this widget, you force your visitors to enter some important piece of information, such as e-mail or password, two times and then ensure that they can submit the form content only if the two values match.
+To implement this functionality, the control provides two `Textbox` input fields and validates that their content is the same.
 
-This control is based on the `Textbox` control.  To learn how to configure their properties, see [Textbox](https://www.progress.com/documentation/sitefinity-cms/textbox).
+This control is based on the `Textbox` control. To learn how to configure their properties, see [Textbox](https://www.progress.com/documentation/sitefinity-cms/textbox).
 
 ## Prerequisites
 
