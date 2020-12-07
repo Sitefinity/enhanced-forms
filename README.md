@@ -132,4 +132,4 @@ To prevent build errors, you must delete all other files generated after the ```
 
 ## More information
 
-The source code in this repository is not supported by Progress. However, you may create pull requests and open issues in this repository and the Sitefinity team will address them.
+This sample code is governed by the incuded [EULA](https://github.com/Sitefinity/enhanced-forms/blob/master/EULA.md). If you require support with it, you may create pull requests and open issues in this repository and the Sitefinity team will address them.
