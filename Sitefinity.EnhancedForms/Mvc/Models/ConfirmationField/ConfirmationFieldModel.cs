@@ -111,7 +111,7 @@ namespace Sitefinity.EnhancedForms.Mvc.Models.ConfirmationField
                 ValidatorDefinition = this.ValidatorDefinition,
                 MainFieldRequiredViolationMessage = BuildErrorMessage(this.ValidatorDefinition.RequiredViolationMessage, metaField.Title),
                 ConfirmationFieldRequiredViolationMessage = BuildErrorMessage(this.ValidatorDefinition.RequiredViolationMessage, this.ConfirmationTitle),
-                MaxLengthViolationMessage = BuildErrorMessage(this.ValidatorDefinition.MaxLengthViolationMessage, metaField.Title, this.ValidatorDefinition.MaxLength.ToString()),
+                MaxLengthViolationMessage = BuildErrorMessage(this.ValidatorDefinition.MaxLengthViolationMessage, metaField.Title),
                 PlaceholderText = this.PlaceholderText,
                 InputType = this.InputType,
                 Hidden = this.Hidden && (!SystemManager.IsDesignMode || SystemManager.IsPreviewMode),
