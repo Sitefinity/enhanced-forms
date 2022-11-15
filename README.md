@@ -3,6 +3,9 @@ Progress® Sitefinity® CMS Enhanced MVC Forms Widgets
 
 > **Latest supported version**: Sitefinity CMS 13.1.7400.0
 
+>**IMPORTANT**: This repository may not be compatible with the latest or your current Sitefinity CMS version. If you want to use the repository with a specific Sitefinity CMS version, either upgrade the code from this repository or your Sitefinity CMS project to ensure compatibility.<br/>
+The dev team monitors the repository. You can create a GitHub issue to submit feedback or report bugs. Or make a pull request to submit project enhancements or compatibility changes that support new Sitefinity CMS versions.
+
 ## Overview
 
 In this repository you can find multiple MVC widgets which you can use to extend the functionality provided by the built-in [MVC forms](https://www.progress.com/documentation/sitefinity-cms/forms).
